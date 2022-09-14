@@ -19,6 +19,7 @@ public class RunnerConfig {
         Configuration.reportsFolder = "target/screenshots";
         Configuration.browserSize = "1920x1080";
         Configuration.browser = browser;
+        Configuration.browserBinary = "/usr/bin/google-chrome";
         if (browserVersion != null) {
             Configuration.browserVersion = browserVersion;
         }
@@ -32,8 +33,5 @@ public class RunnerConfig {
                 .savePageSource(true));
         CustomLogger.logger.info("ok");
 
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
-        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
     }
 }
