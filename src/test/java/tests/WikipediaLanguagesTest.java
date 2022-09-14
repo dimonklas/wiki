@@ -23,7 +23,7 @@ public class WikipediaLanguagesTest extends BasePage {
         open(Urls.WIKIPEDIA_MAIN_PAGE.getUrl());
     }
 
-    @Test(dataProvider = "languageCodes")
+//    @Test(dataProvider = "languageCodes")
     public void checkLanguages(String languageCode) {
         wikipediaMainPage.pressButtonWithLanguage(languageCode);
         checkUrl("https://" + languageCode.toLowerCase() + ".wikipedia.org/wiki/", 5);
